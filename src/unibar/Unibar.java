@@ -4,6 +4,9 @@
  */
 package unibar;
 
+import org.hibernate.Session;
+import persistencia.HibernateUtil;
+
 /**
  *
  * @author jaimedias
@@ -14,7 +17,12 @@ public class Unibar {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Session session = HibernateUtil.getSession();
+        HibernateUtil.beginTransaction();
+        HibernateUtil.commitTransaction();
+        HibernateUtil.closeSession();
+
+        System.out.println("Banco sincronizado com Hibernate!");
     }
-    
+
 }

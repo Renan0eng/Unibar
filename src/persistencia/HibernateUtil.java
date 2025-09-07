@@ -3,6 +3,7 @@ package persistencia;
 
 import entidades.Cidade;
 import entidades.Cliente;
+import entidades.ContasPagar;
 import entidades.ContasReceber;
 import entidades.Estado;
 import entidades.ItensVenda;
@@ -95,6 +96,7 @@ public class HibernateUtil {
                     .addAnnotatedClass(ItensVenda.class)
                     .addAnnotatedClass(MovimentoEstoque.class)
                     .addAnnotatedClass(ContasReceber.class)
+                    .addAnnotatedClass(ContasPagar.class)
                     .buildSessionFactory();
         } catch (RuntimeException e) {
             e.printStackTrace();

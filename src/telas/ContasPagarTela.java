@@ -149,7 +149,7 @@ public class ContasPagarTela extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jLabel1.setText("Contas a Receber");
+        jLabel1.setText("Contas a Pagar");
 
         jLabel2.setText("Código:");
 
@@ -227,6 +227,11 @@ public class ContasPagarTela extends javax.swing.JDialog {
         });
 
         cCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cClienteActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Data Lançamento:");
 
@@ -483,6 +488,10 @@ public class ContasPagarTela extends javax.swing.JDialog {
     private void cFormaPagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cFormaPagActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cFormaPagActionPerformed
+
+    private void cClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cClienteActionPerformed
 
     /**
      * @param args the command line arguments
